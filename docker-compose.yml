@@ -1,0 +1,19 @@
+services:
+  database:
+    container_name: todo-lists-database
+    image: postgres:17.0-alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: todo-lists
+    volumes:
+      - database-volume:/var/run/postgresql
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+
+volumes:
+  database-volume:

@@ -1,0 +1,19 @@
+# Compiled Output
+/dist
+/node_modules
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+
+# OS
+.DS_Store
+
+# Environment Files
+.env
+.env.*
+!.env.example
+
+# Build Files
+*.tsbuildinfo
